@@ -1,35 +1,197 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 header {
-    background-color: #f0f0f0;
-    padding: 20px;
+    background-color: #f4f4f4;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
 }
 
-.revou-logo{
-    height: 48px;
-    width: 48px;
-    background-size: cover;
-    border-radius: 50%;
+#identity{
+    margin-top: 5px;
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: tomato;
 }
 
-nav {
+h2{
+    margin-bottom: 25px;
+    font-size: 30px;
+}
+
+#our-profile-content{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+#banner-autoslide {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.banner-images {
+    display: flex; 
+    transition: transform 0.5s ease;
+}
+
+.banner-image {
+    min-width: 100%;
+    width: auto;
+    height: 500px;
+    transition: opacity 2s ease;
+}
+
+.nav-menu {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
 }
 
-nav li {
-    list-style-type: none;
+.logo {
+    width: 50px;
+    height: auto;
 }
 
-nav a {
+.nav-section {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-section li a {
     text-decoration: none;
     color: #333;
+    padding: 10px 20px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-section li a:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+main {
+    padding: 20px;
+    flex: 1;
+}
+
+/* Layout container for Message Us and Message Display */
+#message-us-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+#messageForm, .message-display{
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+#messageFormContainer, .message-display {
+    flex: 1;
+}
+
+.message-display {
+    padding: 20px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+}
+
+.message-display h2 {
+    margin-bottom: 15px;
+}
+
+.message-display p {
+    margin-bottom: 10px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.gender-group {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+input[type="text"], input[type="date"], textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.gender-group input {
+    margin-right: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    width: 100%;
+    margin-top: auto;
+}
+
+@media (max-width: 768px) {
+    #message-us-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    #messageFormContainer, .message-display {
+        max-width: 100%;
+    }
+
+    .nav-section {
+        flex-direction: row; 
+        flex-wrap: wrap; 
+        justify-content: space-between;
+    }
+
+    .nav-section li {
+        flex: 1; 
+        min-width: 85px; 
+        text-align: right;
+    }
+
+    .nav-section li a {
+        padding: 8px 10px; 
+        font-size: 14px; 
+    }
 }

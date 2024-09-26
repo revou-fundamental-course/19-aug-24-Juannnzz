@@ -4,34 +4,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Juan Gunawan Website</title>
-    <link rel="stylesheet" href="css\style.css">
+    <title>Portofolio Website</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <header>
         <section class="nav-menu">
-            <div class="revou-logo">
-                <img src="../Mini Project 1/assets/logo-revou.png" alt="logo-revou">
+            <div class="logo-container">
+                <img src="../Mini Project 1/assets/logo-revou.png" alt="logo-revou" class="logo">
             </div>
             <nav>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#our-profile">Our Profile</a></li>
-                <li><a href="#achievement">Achievment</a></li>
-                <li><a href="#message-us">Message Us</a></li>
-            </nav>    
+                <ul class="nav-section">
+                    <li><a href="#identity">Home</a></li>
+                    <li><a href="#our-profile">Our Profile</a></li>
+                    <li><a href="#banner-autoslide">Portfolio</a></li>
+                    <li><a href="#message-us-container">Message Us</a></li>
+                </ul>
+            </nav>
         </section>
     </header>
-    
-    <main>
 
+    <main>
+        <section>
+            <div id="identity">
+                <p><strong>Hi <span id="displayName"></span>, Welcome To Website</strong></p>
+            </div>
+        </section>
+
+        <section id="our-profile">
+            <h2>Our Profile</h2>
+            <div id="our-profile-content">
+                <h3>Indonesia’s Largest Professional Skilling Platform</h3>
+                <p>Master today’s digital skills with industry leaders, get personalized mentorship, and access a
+                    community rich in career opportunities!</p>
+            </div>
+        </section>
+
+        <section id="banner-autoslide">
+            <h2>Portofolio</h2>
+            <div class="banner-images">
+                <img src="../Mini Project 1/assets/porto-astro.png" alt="porto-astro-revou" class="banner-image">
+                <img src="../Mini Project 1/assets/porto-telkom.png" alt="porto-telkom-revou" class="banner-image">
+                <img src="../Mini Project 1/assets/porto-zurich.png" alt="porto-zurich-revou" class="banner-image">
+            </div>
+        </section>
+
+        <section id="message-us-container">
+            <div id="messageFormContainer">
+                <h2>Message Us</h2>
+                <form id="messageForm">
+                    <div class="form-group">
+                        <label for="name">Nama :</label>
+                        <input type="text" id="name" placeholder="Nama" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="dob">Tanggal Lahir :</label>
+                        <input type="date" id="dob" required>
+                    </div>
+                    <div class="gender-group">
+                        <label for="gender">Jenis Kelamin :</label>
+                        <input type="radio" id="male" name="gender" value="Laki-Laki" required>
+                        <label for="male">Laki-Laki</label>
+                        <input type="radio" id="female" name="gender" value="Perempuan" required>
+                        <label for="female">Perempuan</label>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Pesan :</label>
+                        <textarea id="message" placeholder="Pesan" required></textarea>
+                    </div>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+
+            <div class="message-display">
+                <h2>Message Details</h2>
+                <p id="currentTime"></p>
+                <p><strong>Nama:</strong> <span id="displayNameMessage"></span></p>
+                <p><strong>Tanggal Lahir:</strong> <span id="displayDob"></span></p>
+                <p><strong>Jenis Kelamin:</strong> <span id="displayGender"></span></p>
+                <p><strong>Pesan:</strong> <span id="displayMessage"></span></p>
+            </div>
+        </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 Website Juan Gunawan. All Rights Reserved.</p>
+        <p>&copy; 2024 Juan Gunawan. All Rights Reserved.</p>
     </footer>
 
-    <script src="js\script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
